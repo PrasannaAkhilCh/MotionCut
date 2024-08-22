@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(-45deg, #f4f760, #feb47b, #86a8e7, #9191ea);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.dropdown {
+    margin-bottom: 15px;
+}
+
+.dropbtn {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #047cfd;
+    color: white;
+    transition: background-color 0.3s ease;
+    width: auto;
+    min-width: 200px; 
+    text-align: left; 
+    white-space: nowrap; 
+}
+
+
+.dropbtn:hover {
+    background-color: #0056b3;
+}
+
+#search-input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #333;
+    margin-bottom: 15px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    outline: none;
+    background-color: #fff;
+}
+
+#search-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .search-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dropdown {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+    #search-input {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+    #search-button {
+        width: auto;
+    }
+}
